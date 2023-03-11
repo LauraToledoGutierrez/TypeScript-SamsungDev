@@ -5,8 +5,7 @@ Esta es la práctica correspondiente al modulo TypeScript:
 Se propone realizar unas clases para almacenar la logica de una agenda con los datos personales de los individuos: direcciones, telefonos, mails.. Cada clase ha de crearse en un archivo TypeScript diferente.
 
 <p align="center">
-<<<<<<< HEAD
- <img src="https://i.imgur.com/Ni8OaWs.png" width="400" height="250">
+ <img src="https://i.imgur.com/Ni8OaWs.png" width="384" height="404">
 </p>
 
 Una vez realizadas las clases: 
@@ -15,7 +14,4 @@ Una vez realizadas las clases:
 * Se modificará uno de los registros de persona añadidos, realizando la búsqueda por DNI y añadiendo una nueva dirección, un nuevo mail y un nuevo teléfono. Estos cambios se deben realizar mediante el uso de métodos definidos previamente en las clases.
 
 * Se mostrarán desde el módulo principal los 3 registros con los cambios realizados anteriormente en la consola.
-=======
- <img src="https://i.imgur.com/Ni8OaWs.png" width="384" height="404">
-</p>
->>>>>>> cc828925d41045baf98918899c502a7c49cba8c1
+
