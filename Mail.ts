@@ -1,5 +1,5 @@
 
-class Mail {
+export class Mail {
     direccion: string;
     tipo: string;
 

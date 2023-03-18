@@ -1,5 +1,5 @@
 
-class Direccion {
+export class Direccion {
     calle: string;
     ciudad: string;
     codigoPostal: string;

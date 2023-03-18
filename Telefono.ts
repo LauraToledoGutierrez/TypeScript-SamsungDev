@@ -1,5 +1,5 @@
 
-class Telefono {
+export class Telefono {
     numero: string;
     tipo: string;
 

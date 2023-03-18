@@ -1,5 +1,7 @@
-
-class Persona {
+import { Direccion } from "./Direccion";
+import { Mail } from "./Mail";
+import { Telefono } from "./Telefono";
+export class Persona {
     nombre: string;
     apellidos: string;
     edad: number;
@@ -7,7 +9,7 @@ class Persona {
     cumpleaños: Date;
     colorFavorito: String;
     sexo: String;
-    dirrecciones: Direccion;
+    direcciones: Direccion;
     mails: Mail;
     telefono: Telefono;
     notas: String;
@@ -20,9 +22,24 @@ class Persona {
         this.cumpleaños = cumpleaños;
         this.colorFavorito = colorFavorito;
         this.sexo = sexo;
-        this.dirrecciones = direcciones;
+        this.direcciones = direcciones;
         this.mails = mails;
         this.telefono = telefono;
         this.notas = notas;
+    }
+
+    getDatos(): string {
+        const fechaNacimiento = `${this.cumpleaños.getDate()}/${this.cumpleaños.getMonth()+1}/${this.cumpleaños.getFullYear()}`;
+        
+        let datosPersona = `Nombre completo: ${this.nombre} ${this.apellidos}\n`;
+        datosPersona += `Edad: ${this.edad}\n`;
+        datosPersona += `DNI: ${this.DNI}`;
+        datosPersona += `Fecha de nacimiento: ${fechaNacimiento}\n`;
+        datosPersona += `Color favorito: ${this.colorFavorito}\n`;
+        datosPersona += `Sexo: ${this.sexo}\n`;
+
+       return datosPersona;
+
+
     }
 } 
