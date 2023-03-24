@@ -1,45 +1,95 @@
-import { Direccion } from "./Direccion";
-import { Mail } from "./Mail";
-import { Telefono } from "./Telefono";
-export class Persona {
-    nombre: string;
-    apellidos: string;
-    edad: number;
-    DNI: string;
-    cumpleaños: Date;
-    colorFavorito: String;
-    sexo: String;
-    direcciones: Direccion;
-    mails: Mail;
-    telefono: Telefono;
-    notas: String;
+import { Direccion } from './Direccion';
+import { Telefono } from './Telefono';
+import { Mail } from './Mail';
 
-    constructor(nombre: string, apellidos: string, edad: number, DNI: string, cumpleaños: Date, colorFavorito: String, sexo: String, direcciones: Direccion, mails: Mail, telefono: Telefono, notas: string){
+export class Persona {
+    private nombre: string;
+    private apellidos: string;
+    private edad: number;
+    private dni: string;
+    private cumpleaños: Date;
+    private colorFavorito: string;
+    private sexo: string;
+    private direcciones: Direccion[];
+    private mails: Mail[];
+    private telefonos: Telefono[];
+    private notas: string;
+
+    constructor(nombre: string, apellidos: string, edad: number, dni: string, cumpleaños: Date, colorFavorito: string, sexo: string) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.edad = edad;
-        this.DNI =DNI;
+        this.dni = dni;
         this.cumpleaños = cumpleaños;
         this.colorFavorito = colorFavorito;
         this.sexo = sexo;
-        this.direcciones = direcciones;
-        this.mails = mails;
-        this.telefono = telefono;
-        this.notas = notas;
-    }
+        this.direcciones = [];
+        this.mails = [];
+        this.telefonos = [];
+        this.notas = "";
+  }
 
-    getDatos(): string {
-        const fechaNacimiento = `${this.cumpleaños.getDate()}/${this.cumpleaños.getMonth()+1}/${this.cumpleaños.getFullYear()}`;
-        
-        let datosPersona = `Nombre completo: ${this.nombre} ${this.apellidos}\n`;
-        datosPersona += `Edad: ${this.edad}\n`;
-        datosPersona += `DNI: ${this.DNI}`;
-        datosPersona += `Fecha de nacimiento: ${fechaNacimiento}\n`;
-        datosPersona += `Color favorito: ${this.colorFavorito}\n`;
-        datosPersona += `Sexo: ${this.sexo}\n`;
+  getNombre(): string {
+    return this.nombre;
+  }
 
-       return datosPersona;
+  getApellido(): string {
+    return this.apellidos;
+  }
 
+  getEdad(): number {
+    return this.edad;
+  }
 
-    }
-} 
+  getDni(): string {
+    return this.dni;
+  }
+
+  getFechaNacimiento(): Date {
+    return this.cumpleaños;
+  }
+
+  getColorFavorito(): string {
+    return this.colorFavorito;
+  }
+
+  getGenero(): string {
+    return this.sexo;
+  }
+
+  getDirecciones(): Direccion[] {
+    return this.direcciones;
+  }
+
+  getMails(): Mail[] {
+    return this.mails;
+  }
+
+  getTelefonos(): Telefono[] {
+    return this.telefonos;
+  }
+
+  getNotas(): string {
+    return this.notas;
+  }
+
+  setNotas(notas: string): void {
+    this.notas = notas;
+  }
+
+  addDireccion(direccion: Direccion): void {
+    this.direcciones.push(direccion);
+  }
+
+  addMail(mail: Mail): void {
+    this.mails.push(mail);
+  }
+
+  addTelefono(telefono: Telefono): void {
+    this.telefonos.push(telefono);
+  }
+
+  toString(): string {
+    return `${this.nombre} ${this.apellidos}, DNI: ${this.dni}`;
+  }
+}

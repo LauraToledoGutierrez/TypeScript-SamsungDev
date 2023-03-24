@@ -1,15 +1,5 @@
+import { ITelefono } from './ITelefono';
 
-export class Telefono {
-    numero: string;
-    tipo: string;
-
-    constructor(numero: string, tipo: string){
-        this.numero = numero;
-        this.tipo = tipo;
-    }
-
-    getTelefono(): string {
-        let telefono = `${this.tipo}, ${this.numero}`;
-        return telefono;
-    }
+export class Telefono implements ITelefono {
+  constructor(public tipo: string, public numero: string) {}
 }
