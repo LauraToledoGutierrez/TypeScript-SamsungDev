@@ -90,6 +90,17 @@ export class Persona {
   }
 
   toString(): string {
-    return `${this.nombre} ${this.apellidos}, DNI: ${this.dni}`;
+
+    return `- Nombre: ${this.nombre} ${this.apellidos}\n` +
+           `- Edad: ${this.edad}\n` +
+           `- DNI: ${this.dni}\n` +
+           `- Edad: ${this.edad}\n` +
+           `- Cumpleaños ${this.cumpleaños.toLocaleDateString()}\n` +
+           `- Color Favorito: ${this.colorFavorito}\n` +
+           `- Sexo: ${this.sexo}\n` +
+           `- Direcciones:\n${this.direcciones.toString()}\n` +
+           `- Mails:\n${this.mails.toString()}\n` +
+           `- Teléfonos:\n${this.telefonos.toString()}\n` +
+           `- Notas: ${this.notas}\n`;
   }
 }
