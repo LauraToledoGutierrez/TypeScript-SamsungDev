@@ -18,12 +18,7 @@ export class Agenda {
     return this.personas.find((persona) => persona.getDni() === dni);
   }
   
-  public modificarPersona(
-    dni: string,
-    nuevaDireccion: Direccion,
-    nuevoTelefono: Telefono,
-    nuevoMail: Mail
-  ): void {
+  public modificarPersona(dni: string, nuevaDireccion: Direccion, nuevoTelefono: Telefono, nuevoMail: Mail): void {
     const personaAModificar = this.buscarPersonaPorDni(dni);
 
     if (personaAModificar) {

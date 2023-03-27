@@ -73,7 +73,7 @@ export class Direccion {
     this.provincia = provincia;
   }
   public toString(): string {
-    return `${this.calle}, ${this.numero}, ${this.piso}, ${this.letra}, ${this.codigoPostal}, ${this.poblacion}, ${this.provincia}`;
+    return `${this.calle}, ${this.numero}, ${this.piso}, ${this.letra}, ${this.codigoPostal}, ${this.poblacion}, ${this.provincia}\n`;
   }
   
 }

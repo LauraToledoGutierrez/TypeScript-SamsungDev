@@ -19,7 +19,7 @@ var Mail = /** @class */ (function () {
         this.direccion = direccion;
     };
     Mail.prototype.toString = function () {
-        return "".concat(this.tipo, ", ").concat(this.direccion);
+        return "".concat(this.tipo, ", ").concat(this.direccion, "\n");
     };
     return Mail;
 }());

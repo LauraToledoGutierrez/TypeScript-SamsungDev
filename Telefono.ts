@@ -22,6 +22,6 @@ export class Telefono {
   }
 
   public toString(): string{
-    return `${this.tipo}, ${this.numero}`;
+    return `${this.tipo}, ${this.numero}\n`;
   }
 }

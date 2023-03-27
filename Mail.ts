@@ -25,7 +25,7 @@ export class Mail {
   }
 
   public toString(): string{
-    return `${this.tipo}, ${this.direccion}`;
+    return `${this.tipo}, ${this.direccion}\n`;
   }
 }
 

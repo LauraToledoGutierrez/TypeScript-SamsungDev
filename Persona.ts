@@ -98,9 +98,9 @@ export class Persona {
            `- Cumpleaños ${this.cumpleaños.toLocaleDateString()}\n` +
            `- Color Favorito: ${this.colorFavorito}\n` +
            `- Sexo: ${this.sexo}\n` +
-           `- Direcciones:\n${this.direcciones.toString()}\n` +
-           `- Mails:\n${this.mails.toString()}\n` +
-           `- Teléfonos:\n${this.telefonos.toString()}\n` +
+           `- Direcciones:\n${this.direcciones.toString()} \n` +
+           `- Mails:\n${this.mails.toString()} \n` +
+           `- Teléfonos:\n${this.telefonos.toString()} \n` +
            `- Notas: ${this.notas}\n`;
   }
 }

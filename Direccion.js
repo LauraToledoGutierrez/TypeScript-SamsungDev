@@ -54,7 +54,7 @@ var Direccion = /** @class */ (function () {
         this.provincia = provincia;
     };
     Direccion.prototype.toString = function () {
-        return "".concat(this.calle, ", ").concat(this.numero, ", ").concat(this.piso, ", ").concat(this.letra, ", ").concat(this.codigoPostal, ", ").concat(this.poblacion, ", ").concat(this.provincia);
+        return "".concat(this.calle, ", ").concat(this.numero, ", ").concat(this.piso, ", ").concat(this.letra, ", ").concat(this.codigoPostal, ", ").concat(this.poblacion, ", ").concat(this.provincia, "\n");
     };
     return Direccion;
 }());

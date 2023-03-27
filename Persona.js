@@ -68,9 +68,9 @@ var Persona = /** @class */ (function () {
             "- Cumplea\u00F1os ".concat(this.cumpleaños.toLocaleDateString(), "\n") +
             "- Color Favorito: ".concat(this.colorFavorito, "\n") +
             "- Sexo: ".concat(this.sexo, "\n") +
-            "- Direcciones:\n".concat(this.direcciones.toString(), "\n") +
-            "- Mails:\n".concat(this.mails.toString(), "\n") +
-            "- Tel\u00E9fonos:\n".concat(this.telefonos.toString(), "\n") +
+            "- Direcciones:\n".concat(this.direcciones.toString(), " \n") +
+            "- Mails:\n".concat(this.mails.toString(), " \n") +
+            "- Tel\u00E9fonos:\n".concat(this.telefonos.toString(), " \n") +
             "- Notas: ".concat(this.notas, "\n");
     };
     return Persona;
