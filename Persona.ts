@@ -1,34 +1,38 @@
+/* Clase Persona */
 import { Direccion } from './Direccion';
 import { Telefono } from './Telefono';
 import { Mail } from './Mail';
 
 export class Persona {
-    private nombre: string;
-    private apellidos: string;
-    private edad: number;
-    private dni: string;
-    private cumpleaños: Date;
-    private colorFavorito: string;
-    private sexo: string;
-    private direcciones: Direccion[];
-    private mails: Mail[];
-    private telefonos: Telefono[];
-    private notas: string;
+  /*Atributos de la clase persona*/
+  private nombre: string;
+  private apellidos: string;
+  private edad: number;
+  private dni: string;
+  private cumpleaños: Date;
+  private colorFavorito: string;
+  private sexo: string;
+  private direcciones: Direccion[];
+  private mails: Mail[];
+  private telefonos: Telefono[];
+  private notas: string;
 
-    constructor(nombre: string, apellidos: string, edad: number, dni: string, cumpleaños: Date, colorFavorito: string, sexo: string) {
-        this.nombre = nombre;
-        this.apellidos = apellidos;
-        this.edad = edad;
-        this.dni = dni;
-        this.cumpleaños = cumpleaños;
-        this.colorFavorito = colorFavorito;
-        this.sexo = sexo;
-        this.direcciones = [];
-        this.mails = [];
-        this.telefonos = [];
-        this.notas = "";
+  /* Constructor de la clase persona */
+  constructor(nombre: string, apellidos: string, edad: number, dni: string, cumpleaños: Date, colorFavorito: string, sexo: string) {
+    this.nombre = nombre;
+    this.apellidos = apellidos;
+    this.edad = edad;
+    this.dni = dni;
+    this.cumpleaños = cumpleaños;
+    this.colorFavorito = colorFavorito;
+    this.sexo = sexo;
+    this.direcciones = [];
+    this.mails = [];
+    this.telefonos = [];
+    this.notas = "";
   }
 
+  /* Metodos getters y setters */
   getNombre(): string {
     return this.nombre;
   }
@@ -77,6 +81,7 @@ export class Persona {
     this.notas = notas;
   }
 
+  /* Metodos para añadir la nueva informacion a la persona */
   addDireccion(direccion: Direccion): void {
     this.direcciones.push(direccion);
   }
@@ -89,8 +94,8 @@ export class Persona {
     this.telefonos.push(telefono);
   }
 
+  /* Metodo para imprimir la informacion de la persona con formato */
   toString(): string {
-
     return `- Nombre: ${this.nombre} ${this.apellidos}\n` +
            `- Edad: ${this.edad}\n` +
            `- DNI: ${this.dni}\n` +

@@ -1,14 +1,17 @@
+/* Clase Mail */
 export class Mail {
+
+  /*Atributos de la clase mail*/
   tipo: string;
   direccion: string;
 
-  constructor(
-    tipo: string, direccion: string
-  ) {
+  /* Constructor de la clase mail */
+  constructor(tipo: string, direccion: string) {
     this.tipo = tipo;
     this.direccion = direccion;
   }
 
+  /* Metodos getters y setters */
   public getTipo(): string {
     return this.tipo;
   }
@@ -24,6 +27,7 @@ export class Mail {
     this.direccion = direccion;
   }
 
+  /* Para imprimir el atributo email con formato */
   public toString(): string{
     return `${this.tipo}, ${this.direccion}\n`;
   }

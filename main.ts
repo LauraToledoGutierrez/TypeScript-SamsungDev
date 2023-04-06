@@ -1,4 +1,4 @@
-/* Práctica TypeScript Samsung Desarrolladoras*/ 
+/* Práctica TypeScript Samsung Desarrolladoras -  Laura Toledo Gutierrez*/ 
 
 import { Persona } from "./Persona";
 import { Direccion } from "./Direccion";

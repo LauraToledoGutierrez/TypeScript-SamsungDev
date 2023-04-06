@@ -1,4 +1,6 @@
+/* Clase Direccion */
 export class Direccion {
+  /* Atributos de la clase direccion */
   private calle: string;
   private numero: number;
   private piso: number;
@@ -7,6 +9,7 @@ export class Direccion {
   private poblacion: string;
   private provincia: string;
 
+  /* Constructor de la clase direccion */
   constructor(calle: string, numero: number, piso: number, letra: string, codigoPostal: string, poblacion: string, provincia: string) {
     this.calle = calle;
     this.numero = numero;
@@ -16,7 +19,7 @@ export class Direccion {
     this.poblacion = poblacion;
     this.provincia = provincia;
   }
-
+  /* Metodos getters y setters */
   public getCalle(): string {
     return this.calle;
   }
@@ -72,6 +75,8 @@ export class Direccion {
   public setProvincia(provincia: string): void {
     this.provincia = provincia;
   }
+
+  /* Metodo para imprimir la direccion con formato */
   public toString(): string {
     return `${this.calle}, ${this.numero}, ${this.piso}, ${this.letra}, ${this.codigoPostal}, ${this.poblacion}, ${this.provincia}\n`;
   }
